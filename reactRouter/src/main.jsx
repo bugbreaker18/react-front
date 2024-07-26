@@ -41,12 +41,13 @@ const router = createBrowserRouter(
     <Route path='user/:userId' element={<User/>} />
     <Route
     // We can write the entire api logic here only
-    // Loader is an optimized version of calling and retrieving the data from apis, on certain events caused by the user, the Loader will start the fetching process and gett the req data and also store in the cache memory for further use, 
+    // *Loader is an optimized version of calling and retrieving the data from apis, on certain events caused by the user, the Loader will start the fetching process and gett the req data and also store in the cache memory for further use, 
     // Its differentn from useEffect() where the apis are called after the componenet is rendered, here, whenever certain evnets occur, the apis are called, 
     // Typically the events are recorded on some other page like Home page, so that when certain event like user  hovering on a nav of a certain page (say Github) happens, the api is called and thus we have the data in our cache before the entire page is loaded. Thats beneficial  
       // loader={ () => { 
       //   fetch("....")
       // }}
+      // * Read Loader  
       loader={userGithubInfo}
       path='github' 
       element={<Github/>} 
